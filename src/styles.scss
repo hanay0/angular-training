@@ -1,0 +1,19 @@
+@import 'assets/custom-palette/custom-palette.scss';
+
+/* You can add global styles to this file, and also import other style files */
+
+$primary:#f00f00;
+$secondary: #999999;
+$warning: #f3c81a;
+$info: #8826e9;
+$success: #04fc57ea;
+@import "~bootstrap/scss/bootstrap.scss";
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

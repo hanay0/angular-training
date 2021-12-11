@@ -1,0 +1,31 @@
+<div class="section">
+    <div class="container">
+        <div class="row justify-content-center flex-column">
+            <h1>Simple Login Form</h1>
+            <div class="col-6 my-2">
+                <mat-form-field class="w-100" appearance="fill">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="ex : John Doe" [formControl]="name" required>
+                    <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-6 my-2">
+                <mat-form-field class="w-100" appearance="fill">
+                    <mat-label>Enter your email</mat-label>
+                    <input matInput placeholder="pat@example.com" [formControl]="email" required>
+                    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-6 my-2">
+                <mat-form-field class="w-100" appearance="fill">
+                    <mat-label>Enter your password</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" [formControl]="password" required>
+                    <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error>
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+</div>
